@@ -5,13 +5,32 @@ app = Flask(__name__)
 
 # Manifesto do addon
 MANIFEST = {
-    "id": "org.stremio.driveaddon",
+    "id": "org.stremio.gdrive.personal",
     "version": "1.0.0",
-    "name": "Google Drive Addon",
-    "description": "Addon para reproduzir vídeos do Google Drive no Stremio",
-    "types": ["movie", "series"],
-    "idPrefixes": ["gdrive:"]
+    "name": "Google Drive Personal",
+    "description": "Addon pessoal para reproduzir vídeos do Google Drive",
+    "logo": "https://stremio.com/website/static/img/stremio-logo-small.png",
+
+    "resources": [
+        "stream"
+    ],
+
+    "types": [
+        "movie",
+        "series"
+    ],
+
+    "catalogs": [],
+
+    "idPrefixes": [
+        "gdrive:"
+    ],
+
+    "behaviorHints": {
+        "configurable": False
+    }
 }
+
 
 # Rota para fornecer o manifest
 @app.route('/manifest.json')
