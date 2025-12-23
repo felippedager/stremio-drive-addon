@@ -8,11 +8,21 @@ MANIFEST = {
     "version": "1.0.0",
     "name": "Google Drive Personal",
     "description": "Addon pessoal para vídeos do Google Drive",
-    "logo": "https://stremio.com/website/static/img/stremio-logo-small.png",
-    "resources": ["stream"],
+
+    "resources": [
+        {
+            "name": "stream",
+            "types": ["movie", "series"],
+            "idPrefixes": []
+        }
+    ],
+
     "types": ["movie", "series"],
     "catalogs": [],
-    "behaviorHints": {"configurable": False}
+
+    "behaviorHints": {
+        "configurable": False
+    }
 }
 
 @app.route('/manifest.json')
